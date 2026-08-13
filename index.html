@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<title>NANUR BIRTHDAY 🎉</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="sparkle-field" id="sparkleField"></div>
+
+<!-- ============ SCREEN 1: LOADER ============ -->
+<div class="screen" id="screen-loader">
+  <div class="loader-box">
+    <div class="terminal" id="terminalText"></div>
+    <div class="greeting-block" id="greetingBlock">
+      <p class="display">Pata nahi kiya se kiya ban gaya 😛</p>
+      <p>Don't judge, okay nanu?? 🥰</p>
+      <button class="btn-main" id="enterBtn">Enter the chaos 🚀</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SCREEN 2: SONG SELECT ============ -->
+<div class="screen hidden" id="screen-song">
+  <div class="sticky" style="max-width:480px;">
+    <p class="tag">🎧 audio permission</p>
+    <p class="choice-sub" style="margin-top:2px;">Sorry vro, tor shudhu ei 2 tai favourite gaan jani. So eikhan theke jekono ekta select kor 🫩</p>
+    <p style="opacity: 50%;">(Actually aro jani kintu amar tokhon mone chilo nah sorry 😭)</p>
+    <div class="choice-grid">
+      <button class="choice-card" data-song="1">
+        <span class="emoji">🎵</span>
+        <audio id="song1" src="assets/Humdard - Arijit Singh  Ek villain  Jo Tu Mera Humdard Hai.mp3"></audio>
+        <img src="assets/images (1).jpg" alt="Humdard" height="100" title="Humdard" class="song1">
+      </button>
+      <button class="choice-card" data-song="2">
+        <span class="emoji">🎶</span>
+        <audio id="song2" src="assets/Mithoon, Papon - Humnava (Lyrics).mp3"></audio>
+        <img src="assets/images.jpg" alt="Humnava" height="100" title="Humnava" class="song2">
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SCREEN 3: NICKNAME SELECT ============ -->
+<div class="screen hidden" id="screen-nick">
+  <div class="sticky" style="max-width:480px;">
+    <p class="tag">🪪 identity verification required</p>
+    <p class="choice-title" style="margin-top:2px;">Tore ki boli dakbo??</p>
+    <div class="choice-grid">
+      <button class="choice-card" data-nick="1"><span class="emoji">👵</span>NANUUU</button>
+      <button class="choice-card" data-nick="2"><span class="emoji">🐦</span>LAL KABUTAR</button>
+      <button class="choice-card" data-nick="3"><span class="emoji">😘</span>CHOTUUU</button>
+      <button class="choice-card" data-nick="4"><span class="emoji">🥰</span>SHALAAA</button>
+    </div>
+    <p class="confirm-note" id="nickConfirm">Confirmed.<br> Entering <span id="confirmNickname"></span>...🤖</p>
+  </div>
+</div>
+
+<!-- ============ MAIN SITE ============ -->
+<div class="hidden" id="mainSite">
+  <nav class="sitenav" id="siteNav">
+    <button data-target="chaos" class="active">🤡 Chalant Archive</button>
+    <button data-target="garden">🌸 Friendship Garden</button>
+    <button data-target="surprises">🔍 Hidden Surprises</button>
+    <button data-target="celebrate">🎉 Celebration</button>
+    <button data-target="feedback">💌 Feedback(MUSTT!!)</button>
+  </nav>
+
+  <main>
+    <!-- CHALANT ARCHIVE -->
+    <section class="page active" id="page-chaos">
+      <div class="section-head">
+        <h2>THE CHALANT ARCHIVE 🤡</h2>
+        <p>Certified nonsense, archived for legal reasons.</p>
+      </div>
+      <div class="card-grid">
+        <div class="sticky"><h3>📸 That two conversations</h3><p>30th April sharadin ar 31th May, bikal 2.30 ta theke 4.30 ta porjonto time er conversation 2 ta. Explain korte parbo nah ki hoisilo, bhag 😡</p></div>
+        <div class="sticky"><h3>🫠 Made zero sense</h3><p>Ye bhi koi puchne wali cheez hai kya??😃 Tui jai bolos shob gulai nonsense 🥰</p></div>
+        <div class="sticky"><h3>😂 Funny moment</h3><p>Eta niye beshi kisu bolte gele wanted criminal hoye jabo 🤭 Accha jodi specifically bolte hoi tahole ami bolte pari oi Natashar kahini. Kotobar je tore eta niye bolod er upor bolod banaisilam 🥺🤣</p></div>
+        <div class="sticky">
+          <h3>🤫 Inside jokes</h3>
+          <p>2 ta example dicchi, likhbo na, tui nijei shun 😛</p>
+          <div class="voice-msg">
+            <span class="voice-label">🥰 You must be a naika??</span>
+            <audio controls src="assets/2554689724949647.mp4"></audio>
+          </div>
+          <div class="voice-msg">
+            <span class="voice-label">🫩 Ekta gaan shuna to..</span>
+            <audio controls src="assets/2068030573764636.mp4"></audio>
+          </div>
+        </div>
+        <div class="sticky"><h3>😹 Arekta last joke or whatever</h3><p>Mera billi mujhe hi meow 😺🤭</p></div>
+        <div class="sticky"><h3>🕒 3am thoughts</h3><p>"GOOOOD NIGGGHTTTTT CHOOTTUUUU 🥰🤭🥺😍😛😘😻🤙"</p></div>
+        <div class="sticky"><h3>🏆 Roast hall of fame</h3><p>Egula niye bolte gele nijei pure jabo, so sorrryyy 😛</p></div>
+      </div>
+    </section>
+
+    <!-- FRIENDSHIP GARDEN -->
+    <section class="page" id="page-garden">
+      <div class="section-head">
+        <h2>FRIENDSHIP GARDEN 🌸</h2>
+        <p>Growing here: appreciation, unwatered but somehow thriving.</p>
+      </div>
+      <div class="garden-grid">
+        <div class="petal-row"><span class="emoji">🌷</span><p>First of all, ami tor sense of humor er upor crush khai gesi kasam se 😭</p></div>
+        <div class="petal-row"><span class="emoji">🌼</span><p>Arekta karone tor shathe kotha bolte bhalo lage. Onnannora oder free time e amar shathe kotha bolto, kintu tui amar shathe kotha bolar jonno time free korti, jodio jani koto ta shotti 😛 (tui bolsos eta)</p></div>
+        <div class="petal-row"><span class="emoji">🌻</span><p>Ar tor shathe kotha bole ami really feel kori je okayy, amar shatheo kotha bolar ekjon manush ase, like kono judgement nai 😍</p></div>
+        <div class="petal-row"><span class="emoji">🥀</span><p>Onek bhalo dik thakleo ekta kharap dik ase. Tui amake tor shomporke ja kisu bolsos tarmoddhe onek gula mittha chilo, ar eto smoothly bolsos je ami bujhtei pari nai. Bhalo hoye jao kuddus ☹️</p></div>
+        <div class="petal-row"><span class="emoji">🍃</span><p>So lastly, just change hois nah, jemon asos ja asos erokom e thakis please, okay baccha?? 🥰</p></div>
+      </div>
+    </section>
+
+    <!-- HIDDEN SURPRISES -->
+    <section class="page" id="page-surprises">
+      <div class="section-head">
+        <h2>HIDDEN SURPRISES 🔍</h2>
+        <p>Tap around. Everything here does something.</p>
+      </div>
+      <div class="surprise-stage">
+        <div class="surprise-icons">
+          <button class="surprise-icon" data-reveal="star">⭐<span class="label">star</span></button>
+          <button class="surprise-icon" data-reveal="gift">🎁<span class="label">gift</span></button>
+          <button class="surprise-icon" data-reveal="cute">🌸<span class="label">cute >.<</span></button>
+          <button class="surprise-icon" data-reveal="book">📖<span class="label">letter</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CELEBRATION -->
+    <section class="page" id="page-celebrate">
+      <div class="section-head">
+        <h2>THE GRAND FINALE 🎊</h2>
+        <p>Everything's been building to this. Tap below.</p>
+      </div>
+      <div class="night-scene" id="nightScene">
+  <div class="moon"></div>
+  <div class="star-sky" id="starSky"></div>
+  <div id="fireworksLayer"></div>
+  <div id="confettiLayer"></div>
+  <div id="balloonsLayer"></div>
+  <div id="streamersLayer"></div>
+
+  <div class="countdown-overlay hidden" id="countdownOverlay">
+    <span id="countdownNum">3</span>
+  </div>
+
+  <div class="cake-scene" id="cakeScene" style="display:none;">
+    <div class="cake-emoji">🎂</div>
+    <div class="candles" id="candlesRow">
+      <button class="candle" data-lit="true">🕯️</button>
+      <button class="candle" data-lit="true">🕯️</button>
+      <button class="candle" data-lit="true">🕯️</button>
+      <button class="candle" data-lit="true">🕯️</button>
+      <button class="candle" data-lit="true">🕯️</button>
+    </div>
+    <p class="blow-hint" id="blowHint">Tap each candle to blow it out 🕯️</p>
+  </div>
+
+  <h2 id="celebrateHeading" style="display:none;">HAPPYY BIRTHDAYYY <span id="celebrateNickname"></span> 🥳</h2>
+  <p id="celebrateSub" style="display:none;">May Allah bless you with happiness and fulfill your wishes! Stay chalant forever 🥰</p>
+</div>
+      <button class="btn-main" id="celebrate-launch">Light it up 🎆</button>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section class="page" id="page-feedback">
+      <div class="section-head">
+        <h2>BEFORE YOU GO 💌</h2>
+        <p>Tor honest reaction jante chai ✊</p>
+      </div>
+      <div class="feedback-wrap sticky">
+        <form id="feedbackForm" action="https://formspree.io/f/xgawagwp" method="POST">
+          <textarea name="message" id="feedbackMessage" placeholder="Kuch bhi bol, sahi, galat, ulta, sidha, doesn't matter." required></textarea>
+          <br>
+          <button type="submit" class="submit">Send it 🚀</button>
+        </form>
+        <p class="feedback-note">"Thank you so much, eto dur porjonto ashar jonno, ami just ektu try korsi. Though ami eka eta banaite pari nai, amake 2 AI bhai help korse and the main credit goes to them. Ami just imagine ar edit korsi, that's it. Ami jani eta eto tao special kichu nah, but ami amar end theke best ta deowar cheshta korsi. So yeah, once again, have a Happiest Birthday! Btw otirikto ulta palta kotha bolar jonno sorryy 😬"</p>
+        <p class="feedback-status" id="feedbackStatus"></p>
+        <img class="ending-gif" src="assets/EvYHHSntaIl5m-ezgif.com-webp-to-gif-converter.gif" alt="Arehh real hulku Bhai r Nanu hoi gelo😭😭" title="Arehh real hulku Bhai r Nanu hoi gelo😭😭" />
+        <p class="the-end">-The End 🫩-</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="made">made with too much gaandmasti and idk 🥰</footer>
+</div>
+
+<div class="reveal-modal" id="revealModal">
+  <div class="reveal-box">
+    <h3 id="revealTitle"></h3>
+    <img id="revealImage" class="reveal-image hidden" src="assets/Bangladesh_BB_20_taka_2025.00.00_B367a_PNL_কক_4870784_f-465x219.jpg" alt="Dua 🥰" />
+    <p id="revealText"></p>
+    <button class="reveal-close" id="revealClose">close</button>
+  </div>
+</div>
+
+<audio id="bgAudio" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
