@@ -121,7 +121,7 @@
 },
     book: {
       title:'📖 the birthday letter',
-      text:"Bhai re bhai, abar letter!! \n\nHappy Birthday, {{NICKNAME}}!! 🥳\n\nSo, ami kintu eto shundor kore kisu likhte pari nah tui janos, right?? Ami just bolte chacchilam je tui actually onek bhalo, hae tuktak mittha kotha bolleo mon neat and clean. Ar tor mathai onek shomossha ase, psychiatrists dekhais 🤭\n\nThat's all, tui to janos e je ami bhalo kotha beshi ekta bolte pari nah. Ar na janle ekhon jani ne 😛\n\n— Hulku 🧌"
+      text:"Bhai re bhai, abar letter!! \n\nHappy Birthday, {{NICKNAME}}!! 🥳\n\nSo, ami kintu eto shundor kore kisu likhte pari nah tui janos, right?? Ami just bolte chacchilam je tui actually onek bhalo, hae tuktak mittha kotha bolleo mon neat and clean. Ar tor mathai onek shomossha ase, psychiatrists dekhais 🤭\n\nThat's all, tui to janos e je ami bhalo kotha beshi ekta bolte pari nah. Ar na janle ekhon jani ne 😛\n\n— Ek villain / Hulku 🧌"
     }
   };
 document.querySelectorAll('.surprise-icon').forEach(icon=>{
