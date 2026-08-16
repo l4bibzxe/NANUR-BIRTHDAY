@@ -6,7 +6,8 @@
 <title>NANUR BIRTHDAY 🎉</title>
 <link rel="icon" type="image/png" href="assets/657772421_17985504020970815_383949756092060743_n.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -50,7 +51,7 @@
 <div class="screen hidden" id="screen-nick">
   <div class="sticky" style="max-width:480px;">
     <p class="tag">🪪 identity verification required</p>
-    <p class="choice-title" style="margin-top:2px;">Tore ki boli dakbo??</p>
+    <p class="choice-title" style="margin-top:2px;">Ajker jonno apnar nam ta jodi ektu bolten...🙂‍↕️</p>
     <div class="choice-grid">
       <button class="choice-card" data-nick="1"><span class="emoji">👵</span>NANUUU</button>
       <button class="choice-card" data-nick="2"><span class="emoji">🐦</span>LAL KABUTAR</button>
@@ -63,13 +64,14 @@
 
 <!-- ============ MAIN SITE ============ -->
 <div class="hidden" id="mainSite">
-  <nav class="sitenav" id="siteNav">
-    <button data-target="chaos" class="active">🤡 Chalant Archive</button>
-    <button data-target="garden">🌸 Friendship Garden</button>
-    <button data-target="surprises">🔍 Hidden Surprises</button>
-    <button data-target="celebrate">🎉 Celebration</button>
-    <button data-target="feedback">💌 Feedback(MUSTT!!)</button>
-  </nav>
+  <nav class="quest-rail" id="questRail">
+  <div class="quest-track"></div>
+  <button class="quest-node" data-target="chaos" data-step="1"><span class="node-icon">🤡</span><span class="node-num">1</span></button>
+  <button class="quest-node" data-target="garden" data-step="2"><span class="node-icon">🌸</span><span class="node-num">2</span></button>
+  <button class="quest-node" data-target="surprises" data-step="3"><span class="node-icon">🔍</span><span class="node-num">3</span></button>
+  <button class="quest-node" data-target="celebrate" data-step="4"><span class="node-icon">🎉</span><span class="node-num">4</span></button>
+  <button class="quest-node" data-target="feedback" data-step="5"><span class="node-icon">💌</span><span class="node-num">5</span></button>
+</nav>
 
   <main>
     <!-- CHALANT ARCHIVE -->
@@ -98,13 +100,14 @@
         <div class="sticky"><h3>🕒 3am thoughts</h3><p>"GOOOOD NIGGGHTTTTT CHOOTTUUUU 🥰🤭🥺😍😛😘😻🤙"</p></div>
         <div class="sticky"><h3>🏆 Roast hall of fame</h3><p>Egula niye bolte gele nijei pure jabo, so sorrryyy 😛</p></div>
       </div>
+      <button class="continue-btn" data-next="garden">Continue to Friendship Garden 🌸</button>
     </section>
 
     <!-- FRIENDSHIP GARDEN -->
     <section class="page" id="page-garden">
       <div class="section-head">
         <h2>FRIENDSHIP GARDEN 🌸</h2>
-        <p>Growing here: appreciation, unwatered but somehow thriving.</p>
+        <p>ABSOLUTE NATOK 😭</p>
       </div>
       <div class="garden-grid">
         <div class="petal-row"><span class="emoji">🌷</span><p>First of all, ami tor sense of humor er upor crush khai gesi kasam se 😭</p></div>
@@ -113,13 +116,14 @@
         <div class="petal-row"><span class="emoji">🥀</span><p>Onek bhalo dik thakleo ekta kharap dik ase. Tui amake tor shomporke ja kisu bolsos tarmoddhe onek gula mittha chilo, ar eto smoothly bolsos je ami bujhtei pari nai. Bhalo hoye jao kuddus ☹️</p></div>
         <div class="petal-row"><span class="emoji">🍃</span><p>So lastly, just change hois nah, jemon asos ja asos erokom e thakis please, okay baccha?? 🥰</p></div>
       </div>
+      <button class="continue-btn" data-next="surprises">Continue to Hidden Surprises 🔍</button>
     </section>
 
     <!-- HIDDEN SURPRISES -->
     <section class="page" id="page-surprises">
       <div class="section-head">
         <h2>HIDDEN SURPRISES 🔍</h2>
-        <p>Tap around. Everything here does something.</p>
+        <p>Eikhane aro kichu korte partam, kintu messed up hoye jaowar bhoye ar kisu kori nai. SORRY 😰</p>
       </div>
       <div class="surprise-stage">
         <div class="surprise-icons">
@@ -129,13 +133,14 @@
           <button class="surprise-icon" data-reveal="book">📖<span class="label">letter</span></button>
         </div>
       </div>
+      <button class="continue-btn" data-next="celebrate">Continue to the Grand Finale 🎉</button>
     </section>
 
     <!-- CELEBRATION -->
     <section class="page" id="page-celebrate">
       <div class="section-head">
         <h2>THE GRAND FINALE 🎊</h2>
-        <p>Everything's been building to this. Tap below.</p>
+        <p>Abhi toh party shuru hui hai, oii hoii 😍</p>
       </div>
       <div class="night-scene" id="nightScene">
   <div class="moon"></div>
@@ -158,13 +163,14 @@
       <button class="candle" data-lit="true">🕯️</button>
       <button class="candle" data-lit="true">🕯️</button>
     </div>
-    <p class="blow-hint" id="blowHint">Tap each candle to blow it out 🕯️</p>
+    <p class="blow-hint" id="blowHint">FUHHH DE 🌬️</p>
   </div>
 
   <h2 id="celebrateHeading" style="display:none;">HAPPYY BIRTHDAYYY <span id="celebrateNickname"></span> 🥳</h2>
   <p id="celebrateSub" style="display:none;">May Allah bless you with happiness and fulfill your wishes! Stay chalant forever 🥰</p>
 </div>
       <button class="btn-main" id="celebrate-launch">Light it up 🎆</button>
+      <button class="continue-btn hidden" id="continueToFeedback" data-next="feedback">Continue to final message 💌</button>
     </section>
 
     <!-- FEEDBACK -->

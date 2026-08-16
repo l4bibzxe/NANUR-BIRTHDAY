@@ -97,17 +97,71 @@
 
   
 
-  /* ---------- section nav ---------- */
-  const navButtons = document.querySelectorAll('#siteNav button');
-  navButtons.forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      navButtons.forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('section.page').forEach(p=>p.classList.remove('active'));
-      document.getElementById('page-'+btn.dataset.target).classList.add('active');
-      window.scrollTo({top:0, behavior:'smooth'});
-    });
+  /* ---------- quest rail navigation ---------- */
+const STEP_ORDER = ['chaos','garden','surprises','celebrate','feedback'];
+let unlockedStep = 1;
+let currentStep = 1;
+
+function goToPage(target){
+  document.querySelectorAll('section.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+target).classList.add('active');
+  currentStep = STEP_ORDER.indexOf(target) + 1;
+  updateQuestRail();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function unlockStep(n){
+  if(n > unlockedStep){
+    unlockedStep = n;
+  }
+  updateQuestRail();
+}
+
+function updateQuestRail(){
+  document.querySelectorAll('.quest-node').forEach(node=>{
+    const step = parseInt(node.dataset.step, 10);
+    node.classList.remove('current','completed','locked');
+    if(step < currentStep && step <= unlockedStep){
+      node.classList.add('completed');
+    } else if(step === currentStep){
+      node.classList.add('current');
+    } else if(step > unlockedStep){
+      node.classList.add('locked');
+    }
   });
+}
+
+const questTooltip = document.createElement('div');
+questTooltip.className = 'quest-tooltip';
+questTooltip.textContent = 'Finish the chapter before this one first 🔒';
+document.body.appendChild(questTooltip);
+
+document.querySelectorAll('.quest-node').forEach(node=>{
+  node.addEventListener('click', ()=>{
+    const step = parseInt(node.dataset.step, 10);
+    if(step <= unlockedStep){
+      goToPage(node.dataset.target);
+    } else {
+      node.classList.add('shake');
+      setTimeout(()=> node.classList.remove('shake'), 400);
+      const rect = node.getBoundingClientRect();
+      questTooltip.style.top = rect.top + 'px';
+      questTooltip.classList.add('show');
+      setTimeout(()=> questTooltip.classList.remove('show'), 1400);
+    }
+  });
+});
+
+document.querySelectorAll('.continue-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const nextTarget = btn.dataset.next;
+    const nextStep = STEP_ORDER.indexOf(nextTarget) + 1;
+    unlockStep(nextStep);
+    goToPage(nextTarget);
+  });
+});
+
+updateQuestRail();
 
   /* ---------- hidden surprises ---------- */
   const revealContent = {
@@ -121,7 +175,7 @@
 },
     book: {
       title:'📖 the birthday letter',
-      text:"Bhai re bhai, abar letter!! \n\nHappy Birthday, {{NICKNAME}}!! 🥳\n\nSo, ami kintu eto shundor kore kisu likhte pari nah tui janos, right?? Ami just bolte chacchilam je tui actually onek bhalo, hae tuktak mittha kotha bolleo mon neat and clean. Ar tor mathai onek shomossha ase, psychiatrists dekhais 🤭\n\nThat's all, tui to janos e je ami bhalo kotha beshi ekta bolte pari nah. Ar na janle ekhon jani ne 😛\n\n— Ek villain / Hulku 🧌"
+      text:"Bhai re bhai, abar letter!! \n\nHappy Birthday, {{NICKNAME}}!! 🥳\n\nSo, ami kintu eto shundor kore kisu likhte pari nah tui janos, right?? Ami just bolte chacchilam je tui actually onek bhalo, hae tuktak mittha kotha bolleo mon neat and clean. Ar tor mathai onek shomossha ase, psychiatrists dekhais 🤭\n\nThat's all, tui to janos e je ami bhalo kotha beshi ekta bolte pari nah. Ar na janle ekhon jani ne 😛\n\n— Hulku 🧌"
     }
   };
 document.querySelectorAll('.surprise-icon').forEach(icon=>{
@@ -221,7 +275,7 @@ document.querySelectorAll('.surprise-icon').forEach(icon=>{
         playTone(200 + Math.random()*80, 0.3, 'sawtooth');
         remaining--;
         if(remaining === 0){
-          blowHint.textContent = "that's all of them 🎉";
+          blowHint.textContent = "ghee khatam 🥀";
           setTimeout(fullCelebration, 500);
         }
       }, {once:true});
@@ -241,6 +295,8 @@ document.querySelectorAll('.surprise-icon').forEach(icon=>{
     launchConfetti();
     launchBalloons();
     launchStreamers();
+    unlockStep(5);
+    document.getElementById('continueToFeedback').classList.remove('hidden');
   }
 
   function launchFireworks(){
