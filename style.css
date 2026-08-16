@@ -15,7 +15,7 @@
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
 body{
-  font-family:'Quicksand', sans-serif;
+  font-family:'Nunito', sans-serif;
   color:var(--ink);
   background:
     radial-gradient(circle at 20% 10%, var(--blue) 0%, transparent 40%),
@@ -27,12 +27,12 @@ body{
   position:relative;
 }
 h1,h2,h3,.display{
-  font-family:'Baloo 2', cursive;
-  font-weight:700;
+  font-family:'Fredoka', cursive;
+  font-weight:600;
   letter-spacing:0.2px;
 }
 button{
-  font-family:'Baloo 2', cursive;
+  font-family:'Fredoka', cursive;
   cursor:pointer;
   border:none;
   -webkit-tap-highlight-color: transparent;
