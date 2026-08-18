@@ -133,7 +133,7 @@ function updateQuestRail(){
 
 const questTooltip = document.createElement('div');
 questTooltip.className = 'quest-tooltip';
-questTooltip.textContent = 'Finish the chapter before this one first 🔒';
+questTooltip.textContent = "Step by step agaite hobe ma'am 🥰";
 document.body.appendChild(questTooltip);
 
 document.querySelectorAll('.quest-node').forEach(node=>{
@@ -165,7 +165,7 @@ updateQuestRail();
 
   /* ---------- hidden surprises ---------- */
   const revealContent = {
-    star: {title:'⭐ hidden message', text:'Okay, fine, ami tore actually halka patla miss korsilam eibar, age kortam na jodio(most probably) 🙄😒'},
+    star: {title:'⭐ hidden message', text:'Okay, fine, ami tore actually halka patla miss kortesi eibar, age kortam na jodio (sure na) 🙄😒'},
     gift: {title:'🎁 surprise', text:'SURPRISE!!! 😛😍',
         image:'assets/Bangladesh_BB_20_taka_2025.00.00_B367a_PNL_কক_4870784_f-465x219.jpg'
     },
@@ -175,7 +175,7 @@ updateQuestRail();
 },
     book: {
       title:'📖 the birthday letter',
-      text:"Bhai re bhai, abar letter!! \n\nHappy Birthday, {{NICKNAME}}!! 🥳\n\nSo, ami kintu eto shundor kore kisu likhte pari nah tui janos, right?? Ami just bolte chacchilam je tui actually onek bhalo, hae tuktak mittha kotha bolleo mon neat and clean. Ar tor mathai onek shomossha ase, psychiatrists dekhais 🤭\n\nThat's all, tui to janos e je ami bhalo kotha beshi ekta bolte pari nah. Ar na janle ekhon jani ne 😛\n\n— Hulku 🧌"
+      text:"Bhai re bhai, abar letter!! \n\nHappy Birthday, {{NICKNAME}}!! 🥳\n\nSo, ami bhalo korei likhar cheshta kortesi, bhul truti hoile khoma korar dorkar nai 😛 Ami just bolte chacchilam je tui actually onek bhalo, hae tuktak mittha kotha bolleo mon neat and clean. Ar tor mathai onek shomossha ase, psychiatrists dekhais 🤭\n\nThat's all, tui to janos e je ami bhalo kotha beshi ekta bolte pari nah. Ar na janle ekhon jani ne 😛\n\n— Hulku 🧌"
     }
   };
 document.querySelectorAll('.surprise-icon').forEach(icon=>{
